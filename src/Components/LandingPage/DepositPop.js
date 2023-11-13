@@ -377,7 +377,7 @@ const PopUpLeft = styled.div`
     align-items: center;
 
     @media Screen and (max-width: 575px){
-    width: 98%;
+    width: 80%;
     height:40%;
     }
 
@@ -516,5 +516,6 @@ const PopUpBtn = styled.button`
     border: none;
     font-size: 17px;
     outline: none;
+    color: #fff;
     cursor: pointer;
 `
