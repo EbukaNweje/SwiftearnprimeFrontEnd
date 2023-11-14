@@ -26,8 +26,19 @@ const Login = () => {
 
     console.log(message);
     
-    const url = "https://swiftearnprime.onrender.com/api/login"
+    const url = "https://swiftearnprime.vercel.app/api/login"
   const Data = {email, password}
+
+  const urll = "https://swiftearnprime.onrender.com/api/loginemail"
+
+  const loginemail = () => {
+    Axios.post(urll, {email})
+    .then(res => {
+      console.log(res)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
   console.log(url)
   console.log(Data)
 
@@ -39,6 +50,7 @@ const Login = () => {
     .then((res) => {
       console.log(res)
       localStorage.setItem("User", JSON.stringify(res.data));
+      loginemail()
       console.log(res);
 
       const getId = JSON.parse(localStorage.getItem("User"));

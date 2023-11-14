@@ -37,9 +37,20 @@ const SignUp = () => {
     console.log(message);
 
     const Data = {fullName, userName, email, retypeEmail, password, confirmPassword, phoneNumber}
-    const url = "https://swiftearnprime.onrender.com/api/register"
+    const url = "https://swiftearnprime.vercel.app/api/register"
 
     // console.log(url)
+
+    const urll = "https://swiftearnprime.onrender.com/api/sandOtp"
+
+    const sandOtp = () => {
+      Axios.post(urll, {email})
+      .then(res => {
+        console.log(res)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
 
     const Siginup = (e) => {
         e.preventDefault()
@@ -50,7 +61,7 @@ const SignUp = () => {
         .then((res) => {
         localStorage.setItem("User", JSON.stringify(res.data));
         setMessage({ error: true, msg: res.data.message});
-
+        sandOtp()
         const getId = JSON.parse(localStorage.getItem("User"))
         Swal.fire({
           icon: 'success',
