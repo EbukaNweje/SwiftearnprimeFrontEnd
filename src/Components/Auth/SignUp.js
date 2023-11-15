@@ -37,7 +37,7 @@ const SignUp = () => {
     console.log(message);
 
     const Data = {fullName, userName, email, retypeEmail, password, confirmPassword, phoneNumber}
-    const url = "https://clear-houndstooth-elk.cyclic.app/api/register"
+    const url = "https://swiftearnprime.vercel.app/api/register"
 
     // console.log(url)
 
