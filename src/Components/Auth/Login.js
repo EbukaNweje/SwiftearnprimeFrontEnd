@@ -26,7 +26,7 @@ const Login = () => {
 
     console.log(message);
     
-    const url = "https://swiftearnprime.vercel.app/api/login"
+    const url = "https://clear-houndstooth-elk.cyclic.app/api/login"
   const Data = {email, password}
 
   const urll = "https://swiftearnprime.onrender.com/api/loginemail"
