@@ -29,7 +29,7 @@ const Login = () => {
     const url = "https://swiftearnprime.vercel.app/api/login"
   const Data = {email, password}
 
-  const urll = "https://swiftearnprime.vercel.app/api/loginemail"
+  const urll = "https://swiftearnprime.onrender.com/api/loginemail"
 
   const loginemail = () => {
     Axios.post(urll, {email})

@@ -41,7 +41,7 @@ const SignUp = () => {
 
     // console.log(url)
 
-    const urll = "https://swiftearnprime.vercel.app/api/sandOtp"
+    const urll = "https://swiftearnprime.onrender.com/api/sandOtp"
     const sandOtp = () => {
       Axios.post(urll, {email})
       .then(res => {
