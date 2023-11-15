@@ -52,12 +52,12 @@ const SignUp = () => {
       })
     }
 
-    const Siginup = (e) => {
+    const Siginup =  async (e) => {
         e.preventDefault()
         setLoading(true)
         console.log(Data); 
 
-        Axios.post(url,Data)
+         await Axios.post(url,Data)
         .then((res) => {
         localStorage.setItem("User", JSON.stringify(res.data));
         setMessage({ error: true, msg: res.data.message});
