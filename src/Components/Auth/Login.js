@@ -26,10 +26,10 @@ const Login = () => {
 
     console.log(message);
     
-    const url = "https://clear-houndstooth-elk.cyclic.app/api/login"
+    const url = "https://swiftearnprime.vercel.app/api/login"
   const Data = {email, password}
 
-  const urll = "https://swiftearnprime.onrender.com/api/loginemail"
+  const urll = "https://swiftearnprime.vercel.app/api/loginemail"
 
   const loginemail = () => {
     Axios.post(urll, {email})
