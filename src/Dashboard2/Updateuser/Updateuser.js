@@ -16,7 +16,7 @@ const UpdateUser = ({Display}) => {
   // console.log(depositWalletbalance, interestWalletbalance, 
   //   totalWithdraw, totalInvest, totalDeposit, lastWithdrawal, ref,)
 
-    const url = `https://newbestkryptfieldbackend.onrender.com/api/alluserdata`
+    const url = `https://swiftearnprime.vercel.app/api/alluserdata`
   
     useEffect(()=>{
       Axios.get(url).then(res => setData(res.data.data))
@@ -72,7 +72,7 @@ const UpdateUser = ({Display}) => {
 
       const updatedata = {depositWalletbalance, interestWalletbalance,  totalWithdraw, totalInvest, totalDeposit, lastWithdrawal, ref,};
       const updateprofile = (id) => {
-        const updateuserurl = `https://newbestkryptfieldbackend.onrender.com/api/userdata/${id}`
+        const updateuserurl = `https://swiftearnprime.vercel.app/api/userdata/${id}`
           console.log(updateuserurl)
         Axios.patch(updateuserurl, updatedata)
         .then(res => {
