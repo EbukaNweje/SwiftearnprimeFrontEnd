@@ -112,6 +112,17 @@ const DepositPop = () => {
     // console.log({bronze, gold, silver, diamond})
     console.log(plan)
 
+    const pro = amount / 100 * 325 / 7
+    const pro2 = amount / 100 * 325 / 14
+    const pro3 = amount / 100 * 325 / 28
+    const pro4 = amount / 100 * 325 / 366
+    const newPro = Math.floor(pro)
+    const newPro2 = Math.floor(pro2)
+    const newPro3 = Math.floor(pro3)
+    const newPro4 = Math.floor(pro4)
+    console.log("this is it",newPro)
+
+
     return(
         <PopUpDiv>
            
@@ -155,19 +166,21 @@ const DepositPop = () => {
                 </First>
                 <Second>
                     <EarnSub>Amount</EarnSub>
-                    <EarnSub>{amount}</EarnSub>
+                    <EarnSub>{amount} USD</EarnSub>
                 </Second>
                 <Second>
-                    <EarnSub>Cashout Duration</EarnSub>
-                    <EarnSub>12 days</EarnSub>
+                    <EarnSub>Payout period</EarnSub>
+                    <EarnSub>
+                        {plan === 'Bronze plan' ? "Every Day For 7 Day" : plan === 'Silver plan'? "Every Day For 14 Day" : plan === 'Gold plan'? "Every Day For 1 month" : plan === 'Diamond plan' ? "Every Day For unlimited days" : null}
+                    </EarnSub>
                 </Second>
                 <Second>
                     <EarnSub>Profit</EarnSub>
-                    <EarnSub>325</EarnSub>
+                    <EarnSub> {plan === 'Bronze plan' ? `${newPro}` : plan === 'Silver plan'? `${newPro2}` : plan === 'Gold plan'? `${newPro3}` : plan === 'Diamond plan' ? `${newPro4}` : null} USD</EarnSub>
                 </Second>
                 <Second>
                     <EarnSub>Total</EarnSub>
-                    <EarnSub>{convertedAmount * 325 }</EarnSub>
+                    <EarnSub>{plan === 'Bronze plan' ? `${newPro * 7}` : plan === 'Silver plan'? `${newPro2 * 14}` : plan === 'Gold plan'? `${newPro3 * 28}` : plan === 'Diamond plan' ? `${newPro4 * 366}` : null} USD</EarnSub>
                 </Second>
                 <BotEarning>
                     <CloseBtn onClick={()=>{
@@ -260,7 +273,7 @@ const EarnSub = styled.div`
     width: 40%;
 
     @media Screen and (max-width: 575px){
-    font-size: 22px;
+    font-size: 15px;
     width: 50%;
     }
 `
