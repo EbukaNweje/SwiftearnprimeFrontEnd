@@ -1,0 +1,235 @@
+.Deposit_Container {
+    width: 90%;
+    height: max-content;
+}
+
+.Deposits_Wrapper {
+    width: 100%;
+    height: 700px;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+.Deposit_Card {
+    font-family: Nunito, sans-serif;
+    width: 100%;
+    height: 85%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.Deposit_CardWrapper {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Deposit_Amount {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Deposit_Total {
+    width: 33%;
+    height: 90%;   
+}
+
+.Amount_Top {
+    width: 62%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Amount_Bot {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Amount_Btn {
+    width: 40%;
+    height: 50px;
+    background-color: #2980B9;
+    color: rgba(255, 255, 255, 0.938);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.Amount_Btn:hover {
+    transition:all 350ms ;
+    background-color: #1f6fa3;
+}
+
+.Ammount_Label {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.678)
+}
+
+.Amount_Input {
+    width: 100%;
+    height: 48px;
+    padding-inline: 20px;
+    border: 1px solid #E0E6ED;
+    border-radius: 3px;
+}
+
+.Amount_Input::placeholder {
+    color: rgba(0, 0, 0, 0.247);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Choose_Div {
+    width: 70%;
+    height: max-content;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.Transfer_Bitcoin {
+    width: 47.5%;
+    height: 30px;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    border: 1px solid #E0E6ED;
+}
+
+.Transfer_Bitcoin img {
+    width:20px;
+    height: 20px;
+}
+
+.Transfer_Bitcoin span {
+    font-size: 15px;
+}
+
+.Amount_Confrimation {
+    width: 100%;
+    height: 100vh;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.219);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    animation:slideInDown;
+    animation-duration:0.5s ;
+}
+
+.Amount_ConfrimationCard {
+    width: 600px;
+    height: 400px;
+    background-color: #2980B9;
+    border-radius: 5px;
+    animation:slideInDown;
+    animation-duration:2s ;
+}
+
+
+.Transfer_Div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+@media screen and (max-width:430px) {
+    .Deposit_Container {
+        width: 95%;
+        height: max-content;
+    }
+
+    .Deposits_Wrapper {
+        width: 100%;
+        height:1000px;
+        margin-top: 1%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .Deposit_Card {
+        height: 90%;
+    }
+
+    .Deposit_CardWrapper {
+        width: 95%;
+        height: 95%;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: center;
+    }
+
+    .Deposit_Amount {
+        width: 95%;
+        height: 70%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .Deposit_Total {
+        width: 90%;
+        height: 38%;
+        display: flex;
+    }
+    .Amount_Bot {
+            height: max-content;
+        }
+    .Amount_Input {
+        width: 90%;
+    }
+    
+    
+     .Amount_Top {
+        width: 100%;
+        height: 20%;
+    }
+    
+
+    .Ammount_Label {
+        height: 15%;
+    }
+     .Choose_Div {
+        width: 100%;
+        /* align-items: flex-end; */
+        height: max-content;
+        gap: 3%; 
+   } 
+   
+   .Amount_Btn {
+    width: 100%;
+    height:55px;
+    /* margin: 5%; */
+}
+   
+   .Transfer_Bitcoin {
+    width: 47%;
+    height: 50px;
+}
+
+}

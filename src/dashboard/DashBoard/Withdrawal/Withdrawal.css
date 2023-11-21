@@ -1,0 +1,356 @@
+.Withdrawal_Container {
+    width: 90%;
+    height: max-content;
+}
+
+.Withdrawal_Wrapper {
+    width: 100%;
+    height: 800px;
+    margin-top: 3%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.Withdrawal_Card {
+    font-family: Nunito, sans-serif;
+    width: 100%;
+    height: 85%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.Withdrawal_CardWrapper {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Withdrawal_Amount {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Withdrawal_Total {
+    width: 33%;
+    height: 90%;   
+}
+
+.Amount_Top {
+    width: 62%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Amount_Bot {
+    width: 60%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Amount_Btn {
+    width: 40%;
+    height: 17%;
+    background-color: #2980B9;
+    color: rgba(255, 255, 255, 0.938);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Amount_Btn:hover {
+    transition:all 350ms ;
+    background-color: #1f6fa3;
+}
+
+.Ammount_Label {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.678)
+}
+
+.Amount_Input {
+    width: 100%;
+    height: 48px;
+    padding-inline: 20px;
+    border: 1px solid #E0E6ED;
+    border-radius: 3px;
+}
+
+.Amount_Input::placeholder {
+    color: rgba(0, 0, 0, 0.247);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Choose_Div {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+.Transfer_Bitcoin img {
+    width:20px;
+    height: 20px;
+}
+
+.Transfer_Bitcoin span {
+    font-size: 15px;
+}
+
+.Total_Card {
+    width: 47%;
+    height: 55%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    top: 13%;
+    background-color: white;
+    border: 1px solid #E0E6ED;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.Total_Top {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    gap: 45px;
+    height: 65%;
+    border-bottom: 1px solid #E0E6ED;
+
+}
+
+.Inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Total_Bot {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.Total_Bot span{
+    cursor: pointer;
+}
+
+.Total_Bot span:hover {
+    transition: all 350ms ;
+    text-decoration: underline;
+    color: blue;
+}
+
+.Transfer_Div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.Amount_Confrimation {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.219);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+.Amount_ConfrimationCard {
+    width: 600px;
+    height: 400px;
+    background-color: #2980B9;
+    border-radius: 5px;
+}
+
+.Cancel_Div {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3%;
+}
+
+.Cancel_Div span{
+   font-size: 24px;
+   cursor: pointer;
+   color: red;
+   font-family: cursive;
+   transform: scale(1);
+   padding-right: 20px;
+}
+
+.Cancel_Div span:hover {
+    transition: all 250ms;
+   transform: scale(1.15);
+}
+
+.Confirmation_Body {
+    width: 100%;
+    height: 80%;
+    color: white;
+    font-family: Nunito, sans-serif;
+    flex-direction: column;
+    display: flex;
+    align-items:  center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.Confirmation_Body h1{
+    width: 80%;
+    font-size: 28px;
+}
+
+.Confirmation_Input{
+    width: 70%;
+    height: 50px;
+    padding-inline: 20px;
+    outline: none;
+    border: 1px solid black ;
+    border-radius: 5px;
+}
+
+.Confirmation_Input:focus{
+    border: 2px solid blue ;
+}
+
+.Confirmation_Btn {
+    width: 40%;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #104163;
+    color: white;
+    height: 50px;
+    padding-inline: 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+.Confirmation_Btn:hover {
+    transform: all 200ms;
+    border: 1px solid blue;
+    background-color: #083352;
+}
+
+@media screen and (max-width:430px) {
+
+    .Withdrawal_Container {
+        width: 95%;
+    }
+
+    .Withdrawal_Wrapper {
+        width: 100%;
+        height: 1000px;
+        margin-top: 1%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    
+.Withdrawal_Card {
+    height: 90%;
+}
+
+    .Withdrawal_CardWrapper {
+        width: 95%;
+        height: 95%;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: center;
+    } 
+
+    .Withdrawal_Amount {
+        width: 95%;
+        height: 70%;
+        justify-content: space-between;
+        flex-direction: column;
+        
+    }
+    
+    .Withdrawal_Total {
+        width: 90%;
+        height: 38%;
+        display: flex;
+    }
+
+    .Amount_Input {
+        width: 100%;
+    }
+    
+
+    .Amount_Top {
+        width: 100%;
+        height: 15%;
+        gap: 0px;
+    }
+
+    
+    .Amount_Bot {
+        width: 100%;
+    }
+
+    .Choose_Div {
+        width: 100%;
+        height: 90%;
+    }
+
+    .Transfer_Bitcoin {
+        height: 55px;
+    }
+
+    .Amount_Btn {
+        width: 65%;
+        height: 14%;
+    }
+
+    .Total_Top {
+        width: 100%;
+        padding: 30px;
+        gap: 60px;
+    
+    }
+
+    .Total_Card {
+        width: 90%;
+        height: 30%;
+        top: 0;
+        right: 5%;
+        top: 67%;
+
+    }
+
+    .Total_Bot span {
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+}

@@ -1,0 +1,263 @@
+.Confirmation_Page {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(229, 229, 229);
+    position: sticky;
+    z-index: 999999;
+}
+
+.ConfirmationWrapper {
+    width: 70%;
+    font-family: Nunito, sans-serif;
+    /* margin-block: 10vh; */
+    padding-block: 15px;
+    flex-direction: column;
+    background-color: #2980B9;
+    border: 1px solid blue;
+    /* box-shadow:#2980B9  0px 8px 24px; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.Header_Texts {
+    width: 60%;
+    height: 80px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.Header_Instr {
+    width: 60%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    color: white;
+    /* background: #6fadd6; */
+    
+}
+
+.Header_Instr span {
+    color: rgba(255, 255, 255, 0.671);
+}
+
+.Header_Instr h2 {
+    color: blue;
+}
+
+.ProofDiv {
+    width: 90%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    gap: 10px;
+}
+
+.ProofDiv p{
+    font-size: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.ProofDiv span{
+    font-size: 16px;
+    color: white;
+}
+
+.Proof_Img {
+    width: 100%;
+    height: 63%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Payment_Preview {
+    width: 29%;
+    height: 180px;
+    background: #000;
+    object-fit: cover;
+}
+
+.Payment_PreviewSelected {
+    width: 50%;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 5px;
+    background: #000;
+}
+
+.Payment_PreviewSelected img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.Payment_Preview img{
+    width: 100%;
+    height: 100%;
+}
+
+.Payment_Input {
+    display: none;
+}
+
+.Payment {
+    width: 35%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.925);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+}
+
+.Payment:hover {
+    border: 1px solid black;
+    transition: all 35ms;
+    background-color: rgb(228, 228, 228);
+}
+
+.Paynow_Btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.925);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.Paynow_Btn:hover {
+    border: 1px solid black;
+    transition: all 35ms;
+    background-color: rgb(228, 228, 228);
+}
+
+.Preview_Btn {
+    width: 35%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+.Change_Btn {
+    width: 48%;
+    height: 100%;
+     border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #126fad;
+}
+
+.Change_Btn:hover {
+    background-color: #0b5f97;
+}
+.Remove_Btn {
+    width: 48%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(233, 14, 14);
+}
+.Remove_Btn:hover {
+    background-color: rgb(197, 12, 12);
+}
+
+@media screen and (max-width:430px) {
+    .Confirmation_Page {
+        width: 100%;
+        height: max-content
+    }
+    .ConfirmationWrapper {
+        width: 95%;
+        height: 85%;
+        justify-content: center;
+    }
+
+    
+.Header_Texts {
+    width: 85%;
+    height: 100px;
+    font-size: 16px;
+    gap: 12px;
+    align-items: center;
+}
+
+.Header_Instr {
+    width: 95%;
+    height: max-content;
+    /* background-color: red; */
+    
+}
+
+.Header_Instr h2{
+    font-size: 14px;
+    
+}
+
+.Header_Texts h2 {
+    width: 70%;
+    font-size: 16px;
+}
+
+.ProofDiv {
+    width: 95%;
+    height: max-content;
+    gap: 10px;
+    justify-content: flex-end;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.Proof_Img {
+    gap: 10px;
+}
+
+.Payment_Preview {
+    width: 55%;
+}
+
+.Payment_PreviewSelected {
+    width: 80%;
+    height: 45vh;
+}
+
+.Payment {
+    width: 80%;
+    height: 50px;
+}
+
+.Preview_Btn {
+    width: 80%;
+    height: 50px;
+}
+}

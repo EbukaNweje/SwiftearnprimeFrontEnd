@@ -60,27 +60,27 @@ const DepositPop = () => {
         } 
         else if(bronze && convertedAmount > 10000) {
             setErr(true)
-            setErrmsg("Maximum Amount is $10000")
+            setErrmsg("Maximum Amount is $9,999")
         } 
         else if(silver && convertedAmount  < 10000) {
             setErr(true)
             setErrmsg("Minimum Amount is $10000 ")
         } 
-        else if(silver && convertedAmount  > 30000) {
+        else if(silver && convertedAmount  > 29999) {
             setErr(true)
-            setErrmsg("Maximum Amount is $30000 ")
+            setErrmsg("Maximum Amount is $29,999 ")
         } 
         else if(gold && convertedAmount < 30000) {
             setErr(true)
-            setErrmsg("Minimum Amount is $30000 ")
+            setErrmsg("Minimum Amount is $30,000 ")
         } 
         // else if(silver && convertedAmount > 10000) {
         //     setErr(true)
         //     setErrmsg("Maximum Amount is $100000 ")
         // } 
-        else if(gold && convertedAmount > 100000) {
+        else if(gold && convertedAmount > 99999) {
             setErr(true)
-            setErrmsg("Minimum Amount is $100000 ")
+            setErrmsg("Maximum Amount is $99,999 ")
         } 
         else if(diamond && convertedAmount > 1000000) {
             setErr(true)
@@ -102,7 +102,7 @@ const DepositPop = () => {
         setErr(false)
     },[])
    
-    console.log(+(amount))
+    console.log("this is the amount",+(amount))
     useEffect(()=>{
         setTimeout(() => {
             setErr(false)
