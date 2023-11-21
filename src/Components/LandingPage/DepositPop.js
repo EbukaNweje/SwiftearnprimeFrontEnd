@@ -66,7 +66,7 @@ const DepositPop = () => {
             setErr(true)
             setErrmsg("Minimum Amount is $10000 ")
         } 
-        else if(silver && convertedAmount > 30000) {
+        else if(silver && convertedAmount  > 30000) {
             setErr(true)
             setErrmsg("Maximum Amount is $30000 ")
         } 
@@ -74,11 +74,11 @@ const DepositPop = () => {
             setErr(true)
             setErrmsg("Minimum Amount is $30000 ")
         } 
-        else if(silver && convertedAmount > 10000) {
-            setErr(true)
-            setErrmsg("Maximum Amount is $100000 ")
-        } 
-        else if(gold && convertedAmount < 100000) {
+        // else if(silver && convertedAmount > 10000) {
+        //     setErr(true)
+        //     setErrmsg("Maximum Amount is $100000 ")
+        // } 
+        else if(gold && convertedAmount > 100000) {
             setErr(true)
             setErrmsg("Minimum Amount is $100000 ")
         } 
