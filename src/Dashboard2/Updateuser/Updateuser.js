@@ -77,7 +77,7 @@ const UpdateUser = ({Display}) => {
         Axios.patch(updateuserurl, updatedata)
         .then(res => {
           console.log(res)
-          window.location.reload()
+          // window.location.reload()
         })
         .catch((Err)=>{
           console.log(Err)

@@ -23,8 +23,9 @@ const NewDashboard = () => {
 
 const [data, setData] = useState()
 // console.log(setData())
-  const {userid} = useParams()
-  const url = `https://swiftearnprime.onrender.com/api/userdata/${userid}`
+  const {id} = useParams()
+  const url = `https://swiftearnprime.onrender.com/api/userdata/${id}`
+  console.log(url)
 
   useEffect(() =>{
     axios.get(url).then(res => {console.log(res.data.data); setData(res.data.data)})

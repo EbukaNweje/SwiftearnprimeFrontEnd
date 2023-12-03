@@ -57,8 +57,9 @@ const Login = () => {
       console.log(getId._id);
      setMessage({ error: true, msg: "successfully!" });
     setTimeout(() => {
-      navigate(`/dashboard/${getId._id}`)
-      window.location.reload()
+       window.location.href = `https://accountswiftearnprime.vercel.app/#/${getId._id}`
+      // navigate(`/dashboard/${getId._id}`)
+      // window.location.reload()
     }, [2000]);
     // window.location.reload();
     }

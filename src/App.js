@@ -15,8 +15,9 @@ import Howreg from './Components/Support/Howreg';
 import Sendreq from './Components/Support/Sendrequest';
 import Investment from './Components/LandingPage/Land5/Land5';
 import NewsDetailPage from './Components/LandingPage/News/NewsDetailPage';
-// import Dashboard from './Components/Dashboard/Dashboard';
-import Dashboard2 from './Dashboard2/Dashboard2';
+// import Dashboard from './Dashboard2/Dashboard2'
+// import Dashboardn from './MyDashboard/Components/Dashboard/Dashboard';
+// import Dashboard from '../src/MyDashboard/Components/Dashboard/Dashboard'
 import Setting from './Dashboard2/Setting/Setting'
 import WalletPage from './Dashboard2/History/Wallet'
 import WalletId from './Dashboard2/Withdraw/WalletId'
@@ -68,7 +69,7 @@ const App = () => {
         <Route path="/updateuser" element={<Updateuser/>}/>
         <Route element={<Private />}>
         <Route path="/walletid" element={<WalletId/>}/>
-        {/* <Route path="/settings" element={<Setting/>}/> */}
+        <Route path="/settings" element={<Setting/>}/>
         <Route path="/bnb" element={<BnB/>}/>
         <Route path="/tether" element={<Tether/>}/>
         <Route path="/ethereum" element={<Ethereum/>}/>
@@ -78,7 +79,7 @@ const App = () => {
         <Route path="/sendwithdraw" element={<SendWithdrawReq/>}/>
         <Route path="/deposit" element={<WalletId/>}/>
         <Route path="/walletpage" element={<WalletPage/>}/>
-        <Route path="/dashboard/:userid" element={<Dashboard2/>}/>
+        {/* <Route path="/dashboard/:id" element={<Dashboard/>}/> */}
         <Route path="/withdraw" element={<Withdraw/>}/>
         <Route path="/qrcodeset" element={<Qrcodeset/>}/>
         <Route path="/settings" element={<Setting/>}/>
