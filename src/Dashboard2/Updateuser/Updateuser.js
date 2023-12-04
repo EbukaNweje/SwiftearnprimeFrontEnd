@@ -6,17 +6,17 @@ import Axios from "axios"
 
 const UpdateUser = ({Display}) => {
   const [data, setData] = useState()
-  const [depositWalletbalance, setDepositWalletbalance] = useState()
-  const [interestWalletbalance, setInterestWalletbalance] = useState()
-  const [totalInvest, setTotalInvest] = useState()
+  const [accountBalance, setAccountBalance] = useState()
+  const [totalProfit, setTotalProfit] = useState()
+  const [bonus, setBonus] = useState()
   const [totalDeposit, setTotalDeposit] = useState()
-  const [totalWithdraw, setTotalWithdraw] = useState()
-  const [lastWithdrawal, setLastWithdrawal] = useState()
+  const [totalWithdrawal, setTotalWithdrawal] = useState()
+  const [totalInvestment, setTotalInvestment] = useState()
   const [ref, setRef] = useState()
   // console.log(depositWalletbalance, interestWalletbalance, 
   //   totalWithdraw, totalInvest, totalDeposit, lastWithdrawal, ref,)
 
-    const url = `https://swiftearnprime.vercel.app/api/alluserdata`
+    const url = `https://swiftearnprime.onrender.com/api/alluserdata`
   
     useEffect(()=>{
       Axios.get(url).then(res => setData(res.data.data))
@@ -70,14 +70,14 @@ const UpdateUser = ({Display}) => {
       // }
 
 
-      const updatedata = {depositWalletbalance, interestWalletbalance,  totalWithdraw, totalInvest, totalDeposit, lastWithdrawal, ref,};
+      const updatedata = {accountBalance, totalProfit,  bonus, totalDeposit, totalWithdrawal, totalInvestment, ref,};
       const updateprofile = (id) => {
         const updateuserurl = `https://swiftearnprime.vercel.app/api/userdata/${id}`
           console.log(updateuserurl)
         Axios.patch(updateuserurl, updatedata)
         .then(res => {
           console.log(res)
-          // window.location.reload()
+          window.location.reload()
         })
         .catch((Err)=>{
           console.log(Err)
@@ -113,45 +113,45 @@ const UpdateUser = ({Display}) => {
           </InputData> */}
 
           <InputData>
-            <label>Deposit Wallet Balance: </label>
-            <input type='text' placeholder='0' onChange={(e)=>{setDepositWalletbalance(e.target.value)}}/>
+            <label>Account Balance: </label>
+            <input type='text' placeholder='0' onChange={(e)=>{setAccountBalance(e.target.value)}}/>
             {/* <button onClick={(e)=>upddatebtn(props._id,e)} title={"totalDeposit"}>update</button> */}
-            <span>${props.depositWalletbalance}</span>
+            <span>${props.accountBalance}</span>
           </InputData>
 
           <InputData>
-            <label>Total Earned: </label>
-            <input type='text' placeholder='0' onChange={(e)=>{setInterestWalletbalance(e.target.value)}}/>
+            <label>Total Profit: </label>
+            <input type='text' placeholder='0' onChange={(e)=>{setTotalProfit(e.target.value)}}/>
             {/* <button onClick={(e)=>upddatebtn(props._id,e)} title={"totalDeposit"}>update</button> */}
-            <span>${props.interestWalletbalance}</span>
+            <span>${props.totalProfit}</span>
           </InputData>
 
           <InputData>
-            <label>Total Invest: </label>
-            <input type='text' placeholder='0' onChange={(e)=>{setTotalInvest(e.target.value)}}/>
+            <label>Bonus: </label>
+            <input type='text' placeholder='0' onChange={(e)=>{setBonus(e.target.value)}}/>
             {/* <button onClick={(e)=>upddatebtn(props._id,e)} title={"totalDeposit"}>update</button> */}
-            <span>${props.totalInvest}</span>
+            <span>${props.bonus}</span>
           </InputData>
 
           <InputData>
-            <label>Total Deposit: </label>
+            <label>Total Deposits: </label>
             <input type='text' placeholder='0' onChange={(e)=>{setTotalDeposit(e.target.value)}}/>
             {/* <button onClick={(e)=>upddatebtn(props._id,e)} title={"totalDeposit"}>update</button> */}
             <span>${props.totalDeposit}</span>
           </InputData>
 
           <InputData>
-            <label>Total Withdrawal: </label>
-            <input type='text' placeholder='0' onChange={(e)=>{setTotalWithdraw(e.target.value)}}/>
+            <label>Total Widthdrawal: </label>
+            <input type='text' placeholder='0' onChange={(e)=>{setTotalWithdrawal(e.target.value)}}/>
             {/* <button onClick={(e)=>upddatebtn(props._id,e)} title={"totalDeposit"}>update</button> */}
-            <span>${props.totalWithdraw}</span>
+            <span>${props.totalWithdrawal}</span>
           </InputData>
 
           <InputData>
-            <label>Last Withdrawal: </label>
-            <input type='text' placeholder='0' onChange={(e)=>{setLastWithdrawal(e.target.value)}}/>
+            <label>Total Investment: </label>
+            <input type='text' placeholder='0' onChange={(e)=>{setTotalInvestment(e.target.value)}}/>
             {/* <button onClick={(e)=>upddatebtn(props._id,e)} title={"totalDeposit"}>update</button> */}
-            <span>${props.lastWithdrawal}</span>
+            <span>${props.totalInvestment}</span>
           </InputData>
 {/* 
           <InputData>
