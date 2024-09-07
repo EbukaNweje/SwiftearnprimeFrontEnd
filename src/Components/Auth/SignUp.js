@@ -36,32 +36,32 @@ const SignUp = () => {
 
     console.log(message);
 
-    const Data = {fullName, userName, email, retypeEmail, password, confirmPassword, phoneNumber}
+    const Data = {fullName, userName, email, password, phoneNumber}
     const url = "https://swiftearnprime.vercel.app/api/register"
 
     // console.log(url)
 
-    const urll = "https://swiftearnprime.onrender.com/api/sandOtp"
-    const sandOtp = () => {
-      Axios.post(urll, {email})
-      .then(res => {
-        console.log(res)
-      }).catch((err)=>{
-        console.log(err)
-      })
-    }
+    // const urll = "https://swiftearnprime.onrender.com/api/sandOtp"
+    // const sandOtp = () => {
+    //   Axios.post(urll, {email})
+    //   .then(res => {
+    //     console.log(res)
+    //   }).catch((err)=>{
+    //     console.log(err)
+    //   })
+    // }
 
     const Siginup =  async (e) => {
         e.preventDefault()
         setLoading(true)
         console.log(Data); 
 
-         await Axios.post(url,Data)
+         await Axios.post(url, Data)
         .then((res) => {
-        localStorage.setItem("User", JSON.stringify(res.data));
+        localStorage.setItem("id", JSON.stringify(res.data));
         setMessage({ error: true, msg: res.data.message});
-        sandOtp()
-        const getId = JSON.parse(localStorage.getItem("User"))
+        // sandOtp()
+        const getId = JSON.parse(localStorage.getItem("id"))
         Swal.fire({
           icon: 'success',
           title: 'Success',
@@ -70,7 +70,7 @@ const SignUp = () => {
         console.log("this is the data", getId.data._id)
           setTimeout(() => {
             // navigate(`/dashboard/${getId.data._id}`)
-            window.location.href = `https://accountswiftearnprime.vercel.app/#/${getId.data._id}`
+            window.location.href = `https://accountswiftearnprime.vercel.app/`
             // navigate(`/verify/${getId.data._id}`)
             console.log(getId._id);
           }, [2000]);

@@ -50,29 +50,28 @@ const Login = () => {
     .then((res) => {
       console.log(res)
       localStorage.setItem("User", JSON.stringify(res.data));
-      loginemail()
       console.log(res);
 
-      const getId = JSON.parse(localStorage.getItem("User"));
-      console.log(getId._id);
-     setMessage({ error: true, msg: "successfully!" });
-    setTimeout(() => {
-       window.location.href = `https://accountswiftearnprime.vercel.app/#/${getId._id}`
-      // navigate(`/dashboard/${getId._id}`)
-      // window.location.reload()
-    }, [2000]);
-    // window.location.reload();
+      if (res.message === 'User have not been verified'){
+        window.location = `https://accountswiftearnprime.vercel.app/#/`;
+        console.log("object");
+       setLoading(false)
+        return
+      }else{
+      loginemail()
+        const getId = JSON.parse(localStorage.getItem("User"));
+        console.log(getId._id);
+       setMessage({ error: true, msg: "successfully!" });
+      setTimeout(() => {
+         window.location.href = `https://accountswiftearnprime.vercel.app/#/${getId._id}`
+        // navigate(`/dashboard/${getId._id}`)
+        // window.location.reload()
+      }, [2000]);
+      // window.location.reload();
+      }
+
     }
     )
-    .then(()=>{ 
-      setMessage({ error: true, msg: "successfully!" });
-    //   const getId = JSON.parse(localStorage.getItem("User"));
-    //   console.log(getId.data._id);
-    //  setMessage({ error: true, msg: "successfully!" });
-    // setTimeout(() => {
-    //   navigate(`/user/dashboard/${getId.data._id}`)
-    // }, [2000]);
-    })
     .catch((error)=>{
       console.log(error)
       setMessage({error: false, msg: error.response.data.message});
