@@ -37,7 +37,7 @@ const SignUp = () => {
     console.log(message);
 
     const Data = {fullName, userName, email, password, phoneNumber}
-    const url = "https://swiftearnprime.vercel.app/api/register"
+    const url = "https://new-swifteatrn-back-end-az29.vercel.app/api/register"
 
     // console.log(url)
 

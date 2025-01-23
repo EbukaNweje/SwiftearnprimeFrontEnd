@@ -26,7 +26,7 @@ const Login = () => {
 
     console.log(message);
     
-    const url = "https://swiftearnprime.vercel.app/api/login"
+    const url = "https://new-swifteatrn-back-end-az29.vercel.app/api/login"
   const Data = {email, password}
 
   const urll = "https://swiftearnprime.onrender.com/api/loginemail"
