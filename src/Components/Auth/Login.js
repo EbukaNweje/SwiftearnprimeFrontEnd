@@ -26,7 +26,7 @@ const Login = () => {
 
     console.log(message);
     
-    const url = "https://new-swifteatrn-back-end-az29.vercel.app/api/login"
+    const url = "https://swiftearnprime-coral.vercel.app/api/login"
   const Data = {email, password}
 
   const urll = "https://swiftearnprime.onrender.com/api/loginemail"
@@ -53,7 +53,7 @@ const Login = () => {
       console.log(res);
 
       if (res.message === 'User have not been verified'){
-        window.location = `https://accountswiftearnprime.vercel.app/#/`;
+        window.location = `https://swiftearnprime-dashboard.vercel.app/#/`;
         console.log("object");
        setLoading(false)
         return
@@ -63,7 +63,7 @@ const Login = () => {
         console.log(getId._id);
        setMessage({ error: true, msg: "successfully!" });
       setTimeout(() => {
-         window.location.href = `https://accountswiftearnprime.vercel.app/#/${getId._id}`
+         window.location.href = `https://swiftearnprime-dashboard.vercel.app/#/${getId._id}`
         // navigate(`/dashboard/${getId._id}`)
         // window.location.reload()
       }, [2000]);

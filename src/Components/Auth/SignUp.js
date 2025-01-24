@@ -37,7 +37,7 @@ const SignUp = () => {
     console.log(message);
 
     const Data = {fullName, userName, email, password, phoneNumber}
-    const url = "https://new-swifteatrn-back-end-az29.vercel.app/api/register"
+    const url = "https://swiftearnprime-coral.vercel.app/api/register"
 
     // console.log(url)
 
@@ -70,7 +70,7 @@ const SignUp = () => {
         console.log("this is the data", getId.data._id)
           setTimeout(() => {
             // navigate(`/dashboard/${getId.data._id}`)
-            window.location.href = `https://accountswiftearnprime.vercel.app/`
+            window.location.href = `https://swiftearnprime-dashboard.vercel.app/`
             // navigate(`/verify/${getId.data._id}`)
             console.log(getId._id);
           }, [2000]);
