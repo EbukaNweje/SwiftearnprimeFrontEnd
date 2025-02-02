@@ -41,7 +41,7 @@ const SignUp = () => {
 
     // console.log(url)
 
-    // const urll = "https://swiftearnprime.onrender.com/api/sandOtp"
+    const urll = "https://swiftearnprime.onrender.com/api/sandOtp"
     // const sandOtp = () => {
     //   Axios.post(urll, {email})
     //   .then(res => {
@@ -62,11 +62,11 @@ const SignUp = () => {
         setMessage({ error: true, msg: res.data.message});
         // sandOtp()
         const getId = JSON.parse(localStorage.getItem("id"))
-        Swal.fire({
-          icon: 'success',
-          title: 'Success',
-          text: "Check your email for account verification to continue",
-       }) 
+      //   Swal.fire({
+      //     icon: 'success',
+      //     title: 'Success',
+      //     text: "Check your email for account verification to continue",
+      //  }) 
         console.log("this is the data", getId.data._id)
           setTimeout(() => {
             // navigate(`/dashboard/${getId.data._id}`)
