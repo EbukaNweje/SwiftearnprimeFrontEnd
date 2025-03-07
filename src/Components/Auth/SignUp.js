@@ -68,12 +68,13 @@ const SignUp = () => {
       //     text: "Check your email for account verification to continue",
       //  }) 
         console.log("this is the data", getId.data._id)
-          setTimeout(() => {
-            // navigate(`/dashboard/${getId.data._id}`)
-            window.location.href = `https://swiftearnprime-dashboard.vercel.app/`
-            // navigate(`/verify/${getId.data._id}`)
-            console.log(getId._id);
-          }, [2000]);
+        navigate("/login")
+          // setTimeout(() => {
+          //   // navigate(`/dashboard/${getId.data._id}`)
+          //   window.location.href = `https://swiftearnprime-dashboard.vercel.app/`
+          //   // navigate(`/verify/${getId.data._id}`)
+          //   console.log(getId._id);
+          // }, [2000]);
         }
         )
         .catch((error)=>{

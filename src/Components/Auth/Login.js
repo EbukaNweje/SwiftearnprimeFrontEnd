@@ -52,12 +52,12 @@ const Login = () => {
       localStorage.setItem("User", JSON.stringify(res.data));
       console.log(res);
 
-      if (res.message === 'User have not been verified'){
-        window.location = `https://swiftearnprime-dashboard.vercel.app/#/`;
-        console.log("object");
-       setLoading(false)
-        return
-      }else{
+      // if (res.message === 'User have not been verified'){
+      //   window.location = `https://swiftearnprime-dashboard.vercel.app/#/`;
+      //   console.log("object");
+      //  setLoading(false)
+      //   return
+      // }else{
       loginemail()
         const getId = JSON.parse(localStorage.getItem("User"));
         console.log(getId._id);
@@ -70,7 +70,7 @@ const Login = () => {
       // window.location.reload();
       }
 
-    }
+    // }
     )
     .catch((error)=>{
       console.log(error)
